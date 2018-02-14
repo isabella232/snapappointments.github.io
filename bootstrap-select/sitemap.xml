@@ -4,31 +4,37 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-02-12</lastmod>
+     <lastmod>2018-02-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    <url>
+     <loc>/bootstrap-select/</loc>
+     <lastmod>2018-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+
+    
+    <url>
+     <loc>/bootstrap-select/examples/</loc>
+     <lastmod>2018-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/examples/</loc>
-     <lastmod>2018-02-12</lastmod>
+     <loc>/bootstrap-select/options/</loc>
+     <lastmod>2018-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/options/</loc>
-     <lastmod>2018-02-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/methods/</loc>
-     <lastmod>2018-02-12</lastmod>
+     <loc>/bootstrap-select/methods/</loc>
+     <lastmod>2018-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
