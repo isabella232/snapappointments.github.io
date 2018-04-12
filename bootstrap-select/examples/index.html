@@ -23,8 +23,8 @@
 
   <title>Examples | bootstrap-select &middot; SnapAppointments Developer</title>
 
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="../css/highlight.css" rel="stylesheet">
   <link href="../css/base.css" rel="stylesheet">
   <link href="../css/custom.css" rel="stylesheet">
@@ -37,189 +37,185 @@
   <![endif]-->
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#sidebar" data-offset="240">
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
+<header class="navbar navbar-expand-md navbar-light fixed-top bg-light" role="navigation">
+  <!-- Main title -->
+  <a class="navbar-brand" href="..">bootstrap-select</a>
 
-    <!-- Collapsed navigation -->
-    <div class="navbar-header">
+  <!-- Collapsed navigation -->
+  
+  <!-- Expander button -->
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  
+
+  <!-- Expanded navigation -->
+  <div class="navbar-collapse collapse">
+    
+    <!-- Main navigation -->
+    <ul class="navbar-nav mr-auto">
       
-      <!-- Expander button -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       
-
-      <!-- Main title -->
-      <a class="navbar-brand" href="..">bootstrap-select</a>
-    </div>
-
-    <!-- Expanded navigation -->
-    <div class="navbar-collapse collapse">
+      <li class="nav-item">
+        <a class="nav-link" href="..">Getting Started</a>
+      </li>
       
-      <!-- Main navigation -->
-      <ul class="nav navbar-nav">
-        
-        
-        <li >
-          <a href="..">Getting Started</a>
-        </li>
-        
-        
-        
-        <li class="active">
-          <a href="./">Examples</a>
-        </li>
-        
-        
-        
-        <li >
-          <a href="../options/">Options</a>
-        </li>
-        
-        
-        
-        <li >
-          <a href="../methods/">Methods</a>
-        </li>
-        
-        
-      </ul>
       
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="./">Examples</a>
+      </li>
+      
+      
+      
+      <li class="nav-item">
+        <a class="nav-link" href="../options/">Options</a>
+      </li>
+      
+      
+      
+      <li class="nav-item">
+        <a class="nav-link" href="../methods/">Methods</a>
+      </li>
+      
+      
+    </ul>
+    
 
-      <ul class="nav navbar-nav navbar-right">
-        
-        <li>
-          <a href="https://github.com/snapappointments/bootstrap-select/">
-            
-            <i class="fa fa-github"></i>
-            
-            GitHub
-          </a>
-        </li>
-        
-      </ul>
-    </div>
+    <ul class="navbar-nav ml-auto">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/snapappointments/bootstrap-select/">
+          
+          <i class="fa fa-github"></i>
+          
+          GitHub
+        </a>
+      </li>
+      
+    </ul>
   </div>
-</div>
+</header>
 
 
-<section class="jumbotron">
-  <div class="container">
+<section class="jumbotron jumbotron-fluid">
+  <div class="container-fluid">
     <h1>Examples</h1>
   </div>
 </section>
-<div class="container">
-  <div class="col-md-3"><div class="bs-sidebar hidden-print affix-top" role="complementary">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3"><div class="bs-sidebar hidden-print" role="complementary" id="sidebar">
     <ul class="nav bs-sidenav">
       
     
-        <li class="main active">
-        	<a href="#basic-examples">Basic examples</a>
+        <li class="nav-item main">
+        	<a class="nav-link active" href="#basic-examples">Basic examples</a>
         	<ul class="nav">
 	        
-	            <li><a href="#standard-select-boxes">Standard select boxes</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#standard-select-boxes">Standard select boxes</a></li>
 	        
-	            <li><a href="#select-boxes-with-optgroups">Select boxes with optgroups</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#select-boxes-with-optgroups">Select boxes with optgroups</a></li>
 	        
-	            <li><a href="#multiple-select-boxes">Multiple select boxes</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#multiple-select-boxes">Multiple select boxes</a></li>
 	        
 	    	</ul>
         </li>
     
-        <li class="main ">
-        	<a href="#live-search">Live search</a>
+        <li class="nav-item main">
+        	<a class="nav-link " href="#live-search">Live search</a>
         	<ul class="nav">
 	        
-	            <li><a href="#live-search_1">Live search</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#live-search_1">Live search</a></li>
 	        
-	            <li><a href="#key-words">Key words</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#key-words">Key words</a></li>
 	        
 	    	</ul>
         </li>
     
-        <li class="main ">
-        	<a href="#limit-the-number-of-selections">Limit the number of selections</a>
+        <li class="nav-item main">
+        	<a class="nav-link " href="#limit-the-number-of-selections">Limit the number of selections</a>
         	<ul class="nav">
 	        
 	    	</ul>
         </li>
     
-        <li class="main ">
-        	<a href="#custom-button-text">Custom button text</a>
+        <li class="nav-item main">
+        	<a class="nav-link " href="#custom-button-text">Custom button text</a>
         	<ul class="nav">
 	        
-	            <li><a href="#placeholder">Placeholder</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#placeholder">Placeholder</a></li>
 	        
-	            <li><a href="#selected-text">Selected text</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#selected-text">Selected text</a></li>
 	        
-	            <li><a href="#selected-text-format">Selected text format</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#selected-text-format">Selected text format</a></li>
 	        
 	    	</ul>
         </li>
     
-        <li class="main ">
-        	<a href="#styling">Styling</a>
+        <li class="nav-item main">
+        	<a class="nav-link " href="#styling">Styling</a>
         	<ul class="nav">
 	        
-	            <li><a href="#button-classes">Button classes</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#button-classes">Button classes</a></li>
 	        
-	            <li><a href="#checkmark-on-selected-option">Checkmark on selected option</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#checkmark-on-selected-option">Checkmark on selected option</a></li>
 	        
-	            <li><a href="#menu-arrow">Menu arrow</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#menu-arrow">Menu arrow</a></li>
 	        
-	            <li><a href="#style-individual-options">Style individual options</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#style-individual-options">Style individual options</a></li>
 	        
-	            <li><a href="#width">Width</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#width">Width</a></li>
 	        
 	    	</ul>
         </li>
     
-        <li class="main ">
-        	<a href="#customize-options">Customize options</a>
+        <li class="nav-item main">
+        	<a class="nav-link " href="#customize-options">Customize options</a>
         	<ul class="nav">
 	        
-	            <li><a href="#icons">Icons</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#icons">Icons</a></li>
 	        
-	            <li><a href="#custom-content">Custom content</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#custom-content">Custom content</a></li>
 	        
-	            <li><a href="#subtext">Subtext</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#subtext">Subtext</a></li>
 	        
 	    	</ul>
         </li>
     
-        <li class="main ">
-        	<a href="#customize-menu">Customize menu</a>
+        <li class="nav-item main">
+        	<a class="nav-link " href="#customize-menu">Customize menu</a>
         	<ul class="nav">
 	        
-	            <li><a href="#menu-size">Menu size</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#menu-size">Menu size</a></li>
 	        
-	            <li><a href="#selectdeselect-all-options">Select/deselect all options</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#selectdeselect-all-options">Select/deselect all options</a></li>
 	        
-	            <li><a href="#divider">Divider</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#divider">Divider</a></li>
 	        
-	            <li><a href="#menu-header">Menu header</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#menu-header">Menu header</a></li>
 	        
-	            <li><a href="#container">Container</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#container">Container</a></li>
 	        
-	            <li><a href="#dropup-menu">Dropup menu</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#dropup-menu">Dropup menu</a></li>
 	        
 	    	</ul>
         </li>
     
-        <li class="main ">
-        	<a href="#disabled">Disabled</a>
+        <li class="nav-item main">
+        	<a class="nav-link " href="#disabled">Disabled</a>
         	<ul class="nav">
 	        
-	            <li><a href="#disabled-select-box">Disabled select box</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#disabled-select-box">Disabled select box</a></li>
 	        
-	            <li><a href="#disabled-options">Disabled options</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#disabled-options">Disabled options</a></li>
 	        
-	            <li><a href="#disabled-option-groups">Disabled option groups</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#disabled-option-groups">Disabled option groups</a></li>
 	        
 	    	</ul>
         </li>
@@ -227,7 +223,7 @@
     
     </ul>
 </div></div>
-  <div class="col-md-9" role="main">
+    <div class="col-lg-9" role="main">
 
 <h1 id="basic-examples">Basic examples</h1>
 <hr />
@@ -601,7 +597,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
 <p>Wrap selects in grid columns, or any custom parent element, to easily enforce desired widths.</p>
 <div class="bs-docs-example">
   <div class="row">
-    <div class="col-xs-3">
+    <div class="col-sm-3">
       <div class="form-group">
         <select class="selectpicker form-control">
           <option>Mustard</option>
@@ -610,7 +606,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
         </select>
       </div>
     </div>
-    <div class="col-xs-9">
+    <div class="col-sm-9">
       <div class="form-group">
         <select class="selectpicker form-control">
           <option>Mustard</option>
@@ -621,7 +617,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-4">
+    <div class="col-sm-4">
        <div class="form-group">
         <select class="selectpicker form-control">
           <option>Mustard</option>
@@ -630,7 +626,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
         </select>
       </div>
     </div>
-    <div class="col-xs-8">
+    <div class="col-sm-8">
        <div class="form-group">
         <select class="selectpicker form-control">
           <option>Mustard</option>
@@ -641,7 +637,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-5">
+    <div class="col-sm-5">
       <div class="form-group">
         <select class="selectpicker form-control">
           <option>Mustard</option>
@@ -650,7 +646,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
         </select>
       </div>
     </div>
-    <div class="col-xs-7">
+    <div class="col-sm-7">
       <div class="form-group">
         <select class="selectpicker form-control">
           <option>Mustard</option>
@@ -663,7 +659,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
 </div>
 
 <pre><code class="html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-3&quot;&gt;
+  &lt;div class=&quot;col-sm-3&quot;&gt;
     &lt;div class=&quot;form-group&quot;&gt;
       &lt;select class=&quot;selectpicker form-control&quot;&gt;
         &lt;option&gt;Mustard&lt;/option&gt;
@@ -680,7 +676,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
 <p>Alternatively, use the <code>data-width</code> attribute to set the width of the select. Set <code>data-width</code> to <code>'auto'</code> to automatically adjust the width of the select to its widest option. <code>'fit'</code> automatically adjusts the width of the select to the width of its currently selected option. An exact value can also be specified, e.g., <code>300px</code> or <code>50%</code>.</p>
 <div class="bs-docs-example">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-sm-12">
       <div class="form-group">
         <label>width: 'auto'</label>
         <select class="selectpicker form-control" data-width="auto">
@@ -693,7 +689,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-sm-12">
       <div class="form-group">
         <label>width: 'fit'</label>
         <select class="selectpicker form-control" data-width="fit">
@@ -706,7 +702,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-sm-12">
       <div class="form-group">
         <label>width: '100px'</label>
         <select class="selectpicker form-control" data-width="100px">
@@ -719,7 +715,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-sm-12">
       <div class="form-group">
         <label>width: '75%'</label>
         <select class="selectpicker form-control" data-width="75%">
@@ -751,18 +747,21 @@ Using the <code>title</code> attribute will set the default placeholder text whe
 <hr />
 <h2 id="icons">Icons</h2>
 <p>Add an icon to an option or optgroup with the <code>data-icon</code> attribute:</p>
+<p><span class="alert alert-info" role="alert">
+  <strong>Note:</strong> Glyphicons are not included in Bootstrap 4. To use FontAwesome, or another icon library, you'll need to set <code>iconBase</code> to something other than <code>'glyphicon'</code>.
+</span></p>
 <div class="bs-docs-example">
   <select class="selectpicker">
-    <option data-icon="glyphicon-glass">Mustard</option>
-    <option data-icon="glyphicon-heart">Ketchup</option>
-    <option data-icon="glyphicon-film">Relish</option>
-    <option data-icon="glyphicon-home">Mayonnaise</option>
-    <option data-icon="glyphicon-print">Barbecue Sauce</option>
+    <option data-icon="fa-glass">Mustard</option>
+    <option data-icon="fa-heart">Ketchup</option>
+    <option data-icon="fa-film">Relish</option>
+    <option data-icon="fa-home">Mayonnaise</option>
+    <option data-icon="fa-print">Barbecue Sauce</option>
   </select>
 </div>
 
 <pre><code class="html">&lt;select class=&quot;selectpicker&quot;&gt;
-  &lt;option data-icon=&quot;glyphicon-heart&quot;&gt;Ketchup&lt;/option&gt;
+  &lt;option data-icon=&quot;fa-heart&quot;&gt;Ketchup&lt;/option&gt;
 &lt;/select&gt;
 </code></pre>
 
@@ -1052,6 +1051,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
   &lt;/optgroup&gt;
 &lt;/select&gt;
 </code></pre></div>
+  </div>
 </div>
 
 
@@ -1062,11 +1062,14 @@ Using the <code>title</code> attribute will set the default placeholder text whe
     </div>
   </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="../js/highlight.pack.js"></script>
 <script src="../js/base.js"></script>
 <script src="../dist/js/bootstrap-select.min.js"></script>
+<script>
+  $.fn.selectpicker.Constructor.DEFAULTS.iconBase = 'fa';
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113793762-1"></script>
 <script>

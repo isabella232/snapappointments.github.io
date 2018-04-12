@@ -23,8 +23,8 @@
 
   <title>Options | bootstrap-select &middot; SnapAppointments Developer</title>
 
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="../css/highlight.css" rel="stylesheet">
   <link href="../css/base.css" rel="stylesheet">
   <link href="../css/custom.css" rel="stylesheet">
@@ -37,96 +37,92 @@
   <![endif]-->
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#sidebar" data-offset="240">
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
+<header class="navbar navbar-expand-md navbar-light fixed-top bg-light" role="navigation">
+  <!-- Main title -->
+  <a class="navbar-brand" href="..">bootstrap-select</a>
 
-    <!-- Collapsed navigation -->
-    <div class="navbar-header">
+  <!-- Collapsed navigation -->
+  
+  <!-- Expander button -->
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  
+
+  <!-- Expanded navigation -->
+  <div class="navbar-collapse collapse">
+    
+    <!-- Main navigation -->
+    <ul class="navbar-nav mr-auto">
       
-      <!-- Expander button -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       
-
-      <!-- Main title -->
-      <a class="navbar-brand" href="..">bootstrap-select</a>
-    </div>
-
-    <!-- Expanded navigation -->
-    <div class="navbar-collapse collapse">
+      <li class="nav-item">
+        <a class="nav-link" href="..">Getting Started</a>
+      </li>
       
-      <!-- Main navigation -->
-      <ul class="nav navbar-nav">
-        
-        
-        <li >
-          <a href="..">Getting Started</a>
-        </li>
-        
-        
-        
-        <li >
-          <a href="../examples/">Examples</a>
-        </li>
-        
-        
-        
-        <li class="active">
-          <a href="./">Options</a>
-        </li>
-        
-        
-        
-        <li >
-          <a href="../methods/">Methods</a>
-        </li>
-        
-        
-      </ul>
       
+      
+      <li class="nav-item">
+        <a class="nav-link" href="../examples/">Examples</a>
+      </li>
+      
+      
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="./">Options</a>
+      </li>
+      
+      
+      
+      <li class="nav-item">
+        <a class="nav-link" href="../methods/">Methods</a>
+      </li>
+      
+      
+    </ul>
+    
 
-      <ul class="nav navbar-nav navbar-right">
-        
-        <li>
-          <a href="https://github.com/snapappointments/bootstrap-select/">
-            
-            <i class="fa fa-github"></i>
-            
-            GitHub
-          </a>
-        </li>
-        
-      </ul>
-    </div>
+    <ul class="navbar-nav ml-auto">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/snapappointments/bootstrap-select/">
+          
+          <i class="fa fa-github"></i>
+          
+          GitHub
+        </a>
+      </li>
+      
+    </ul>
   </div>
-</div>
+</header>
 
 
-<section class="jumbotron">
-  <div class="container">
+<section class="jumbotron jumbotron-fluid">
+  <div class="container-fluid">
     <h1>Options</h1>
   </div>
 </section>
-<div class="container">
-  <div class="col-md-3"><div class="bs-sidebar hidden-print affix-top" role="complementary">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3"><div class="bs-sidebar hidden-print" role="complementary" id="sidebar">
     <ul class="nav bs-sidenav">
       
     
-        <li class="main active">
-        	<a href="#core-options">Core options</a>
+        <li class="nav-item main">
+        	<a class="nav-link active" href="#core-options">Core options</a>
         	<ul class="nav">
 	        
 	    	</ul>
         </li>
     
-        <li class="main ">
-        	<a href="#events">Events</a>
+        <li class="nav-item main">
+        	<a class="nav-link " href="#events">Events</a>
         	<ul class="nav">
 	        
 	    	</ul>
@@ -135,7 +131,7 @@
     
     </ul>
 </div></div>
-  <div class="col-md-9" role="main">
+    <div class="col-lg-9" role="main">
 
 <h1 id="core-options">Core options</h1>
 <hr />
@@ -481,6 +477,7 @@
   // do something...
 });
 </code></pre></div>
+  </div>
 </div>
 
 
@@ -491,11 +488,14 @@
     </div>
   </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="../js/highlight.pack.js"></script>
 <script src="../js/base.js"></script>
 <script src="../dist/js/bootstrap-select.min.js"></script>
+<script>
+  $.fn.selectpicker.Constructor.DEFAULTS.iconBase = 'fa';
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113793762-1"></script>
 <script>

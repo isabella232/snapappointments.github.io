@@ -23,8 +23,8 @@
 
   <title>Getting Started | bootstrap-select &middot; SnapAppointments Developer</title>
 
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="./css/highlight.css" rel="stylesheet">
   <link href="./css/base.css" rel="stylesheet">
   <link href="./css/custom.css" rel="stylesheet">
@@ -37,81 +37,78 @@
   <![endif]-->
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#sidebar" data-offset="240">
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
+<header class="navbar navbar-expand-md navbar-light fixed-top bg-light" role="navigation">
+  <!-- Main title -->
+  <a class="navbar-brand" href=".">bootstrap-select</a>
 
-    <!-- Collapsed navigation -->
-    <div class="navbar-header">
+  <!-- Collapsed navigation -->
+  
+  <!-- Expander button -->
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  
+
+  <!-- Expanded navigation -->
+  <div class="navbar-collapse collapse">
+    
+    <!-- Main navigation -->
+    <ul class="navbar-nav mr-auto">
       
-      <!-- Expander button -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       
-
-      <!-- Main title -->
-      <a class="navbar-brand" href=".">bootstrap-select</a>
-    </div>
-
-    <!-- Expanded navigation -->
-    <div class="navbar-collapse collapse">
+      <li class="nav-item active">
+        <a class="nav-link" href=".">Getting Started</a>
+      </li>
       
-      <!-- Main navigation -->
-      <ul class="nav navbar-nav">
-        
-        
-        <li class="active">
-          <a href=".">Getting Started</a>
-        </li>
-        
-        
-        
-        <li >
-          <a href="examples/">Examples</a>
-        </li>
-        
-        
-        
-        <li >
-          <a href="options/">Options</a>
-        </li>
-        
-        
-        
-        <li >
-          <a href="methods/">Methods</a>
-        </li>
-        
-        
-      </ul>
       
+      
+      <li class="nav-item">
+        <a class="nav-link" href="examples/">Examples</a>
+      </li>
+      
+      
+      
+      <li class="nav-item">
+        <a class="nav-link" href="options/">Options</a>
+      </li>
+      
+      
+      
+      <li class="nav-item">
+        <a class="nav-link" href="methods/">Methods</a>
+      </li>
+      
+      
+    </ul>
+    
 
-      <ul class="nav navbar-nav navbar-right">
-        
-        <li>
-          <a href="https://github.com/snapappointments/bootstrap-select/">
-            
-            <i class="fa fa-github"></i>
-            
-            GitHub
-          </a>
-        </li>
-        
-      </ul>
-    </div>
+    <ul class="navbar-nav ml-auto">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/snapappointments/bootstrap-select/">
+          
+          <i class="fa fa-github"></i>
+          
+          GitHub
+        </a>
+      </li>
+      
+    </ul>
   </div>
-</div>
+</header>
 
  
-<div class="jumbotron bs-docs-header text-center">
+<div class="jumbotron jumbotron-fluid bs-docs-header text-center">
   <div class="container">
     <h1>bootstrap-select</h1>
-    <p class="lead">Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.</p>
+    <p class="lead">
+      The jQuery plugin that brings select elements into the 21st century with intuitive multiselection, searching, and much more. Now with Bootstrap 4 support.
+    </p>
     <a class="btn btn-outline-inverse btn-lg" href="//github.com/snapappointments/bootstrap-select/archive/v1.13.0-beta.zip" role="button">
       <i class="fa fa-download"></i> Download (v1.13.0-beta)
     </a>
@@ -121,7 +118,7 @@
     <iframe src="https://ghbtns.com/github-btn.html?user=snapappointments&repo=bootstrap-select&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
   </div>
 </div>
-<div class="container">
+<div class="container pb-4">
 
 
 <h1 id="getting-started">Getting Started</h1>
@@ -138,6 +135,11 @@
 
 &lt;!-- (Optional) Latest compiled and minified JavaScript translation files --&gt;
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.0-beta/js/i18n/defaults-*.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<h2 id="install-with-bower">Install with Bower</h2>
+<p>You can also install bootstrap-select using <a href="http://bower.io">Bower</a>:</p>
+<pre><code class="elixir">$ bower install bootstrap-select
 </code></pre>
 
 <h2 id="install-with-npm">Install with npm</h2>
@@ -176,11 +178,14 @@
     </div>
   </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="./js/highlight.pack.js"></script>
 <script src="./js/base.js"></script>
 <script src="./dist/js/bootstrap-select.min.js"></script>
+<script>
+  $.fn.selectpicker.Constructor.DEFAULTS.iconBase = 'fa';
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113793762-1"></script>
 <script>
