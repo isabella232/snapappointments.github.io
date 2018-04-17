@@ -46,11 +46,8 @@
   <!-- Collapsed navigation -->
   
   <!-- Expander button -->
-  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
   
 
@@ -166,7 +163,7 @@
 	        
 	            <li class="nav-item"><a class="nav-link" href="#checkmark-on-selected-option">Checkmark on selected option</a></li>
 	        
-	            <li class="nav-item"><a class="nav-link" href="#menu-arrow">Menu arrow</a></li>
+	            <li class="nav-item"><a class="nav-link" href="#menu-arrow-deprecated">Menu arrow (deprecated)</a></li>
 	        
 	            <li class="nav-item"><a class="nav-link" href="#style-individual-options">Style individual options</a></li>
 	        
@@ -547,8 +544,11 @@ Using the <code>title</code> attribute will set the default placeholder text whe
 &lt;/select&gt;
 </code></pre>
 
-<h2 id="menu-arrow">Menu arrow</h2>
+<h2 id="menu-arrow-deprecated">Menu arrow <span class="text-muted small">(deprecated)</span></h2>
 <p>The Bootstrap menu arrow can be added with the <code>show-menu-arrow</code> class:</p>
+<p><span class="alert alert-danger d-block" role="alert">
+  <strong>Note:</strong> This feature has been deprecated and will be removed in v2.0.0.
+</span></p>
 <div class="bs-docs-example">
   <select class="selectpicker show-menu-arrow">
     <option>Mustard</option>
@@ -747,7 +747,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
 <hr />
 <h2 id="icons">Icons</h2>
 <p>Add an icon to an option or optgroup with the <code>data-icon</code> attribute:</p>
-<p><span class="alert alert-info" role="alert">
+<p><span class="alert alert-info d-block" role="alert">
   <strong>Note:</strong> Glyphicons are not included in Bootstrap 4. To use FontAwesome, or another icon library, you'll need to set <code>iconBase</code> to something other than <code>'glyphicon'</code>.
 </span></p>
 <div class="bs-docs-example">
@@ -914,18 +914,20 @@ Using the <code>title</code> attribute will set the default placeholder text whe
 <h2 id="menu-header">Menu header</h2>
 <p>Add a header to the dropdown menu, e.g. <code>header: 'Select a condiment'</code> or <code>data-header="Select a condiment"</code></p>
 <div class="bs-docs-example">
-  <div class="row-fluid">
-    <select class="selectpicker" data-header="Select a condiment">
-      <option data-subtext="French's">Mustard</option>
-      <option data-subtext="Heinz">Ketchup</option>
-      <option data-subtext="Sweet">Relish</option>
-      <option data-subtext="Miracle Whip">Mayonnaise</option>
-      <option data-divider="true"></option>
-      <option data-subtext="Honey">Barbecue Sauce</option>
-      <option data-subtext="Ranch">Salad Dressing</option>
-      <option data-subtext="Sweet & Spicy">Tabasco</option>
-      <option data-subtext="Chunky">Salsa</option>
-    </select>
+  <div class="row">
+    <div class="col-md-3">
+      <select class="selectpicker form-control" data-header="Select a condiment">
+        <option data-subtext="French's">Mustard</option>
+        <option data-subtext="Heinz">Ketchup</option>
+        <option data-subtext="Sweet">Relish</option>
+        <option data-subtext="Miracle Whip">Mayonnaise</option>
+        <option data-divider="true"></option>
+        <option data-subtext="Honey">Barbecue Sauce</option>
+        <option data-subtext="Ranch">Salad Dressing</option>
+        <option data-subtext="Sweet & Spicy">Tabasco</option>
+        <option data-subtext="Chunky">Salsa</option>
+      </select>
+    </div>
   </div>
 </div>
 
@@ -937,29 +939,33 @@ Using the <code>title</code> attribute will set the default placeholder text whe
 <h2 id="container">Container</h2>
 <p>Append the select to a specific element, e.g. <code>container: 'body'</code> or <code>data-container=".main-content"</code></p>
 <div class="bs-docs-example" style="overflow:hidden;">
-  <div class="row-fluid">
-    <select class="selectpicker">
-      <option data-subtext="French's">Mustard</option>
-      <option data-subtext="Heinz">Ketchup</option>
-      <option data-subtext="Sweet">Relish</option>
-      <option data-subtext="Miracle Whip">Mayonnaise</option>
-      <option data-divider="true"></option>
-      <option data-subtext="Honey">Barbecue Sauce</option>
-      <option data-subtext="Ranch">Salad Dressing</option>
-      <option data-subtext="Sweet & Spicy">Tabasco</option>
-      <option data-subtext="Chunky">Salsa</option>
-    </select>
-    <select class="selectpicker" data-container="body">
-      <option data-subtext="French's">Mustard</option>
-      <option data-subtext="Heinz">Ketchup</option>
-      <option data-subtext="Sweet">Relish</option>
-      <option data-subtext="Miracle Whip">Mayonnaise</option>
-      <option data-divider="true"></option>
-      <option data-subtext="Honey">Barbecue Sauce</option>
-      <option data-subtext="Ranch">Salad Dressing</option>
-      <option data-subtext="Sweet & Spicy">Tabasco</option>
-      <option data-subtext="Chunky">Salsa</option>
-    </select>
+  <div class="row">
+    <div class="col-md-3">
+      <select class="selectpicker form-control">
+        <option data-subtext="French's">Mustard</option>
+        <option data-subtext="Heinz">Ketchup</option>
+        <option data-subtext="Sweet">Relish</option>
+        <option data-subtext="Miracle Whip">Mayonnaise</option>
+        <option data-divider="true"></option>
+        <option data-subtext="Honey">Barbecue Sauce</option>
+        <option data-subtext="Ranch">Salad Dressing</option>
+        <option data-subtext="Sweet & Spicy">Tabasco</option>
+        <option data-subtext="Chunky">Salsa</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <select class="selectpicker form-control" data-container="body">
+        <option data-subtext="French's">Mustard</option>
+        <option data-subtext="Heinz">Ketchup</option>
+        <option data-subtext="Sweet">Relish</option>
+        <option data-subtext="Miracle Whip">Mayonnaise</option>
+        <option data-divider="true"></option>
+        <option data-subtext="Honey">Barbecue Sauce</option>
+        <option data-subtext="Ranch">Salad Dressing</option>
+        <option data-subtext="Sweet & Spicy">Tabasco</option>
+        <option data-subtext="Chunky">Salsa</option>
+      </select>
+    </div>
   </div>
 </div>
 
