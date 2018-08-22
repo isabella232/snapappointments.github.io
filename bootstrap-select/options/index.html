@@ -112,7 +112,21 @@
       
     
         <li class="nav-item main">
-        	<a class="nav-link active" href="#core-options">Core options</a>
+        	<a class="nav-link active" href="#bootstrap-version">Bootstrap version</a>
+        	<ul class="nav">
+	        
+	    	</ul>
+        </li>
+    
+        <li class="nav-item main">
+        	<a class="nav-link " href="#core-options">Core options</a>
+        	<ul class="nav">
+	        
+	    	</ul>
+        </li>
+    
+        <li class="nav-item main">
+        	<a class="nav-link " href="#default-settings">Default settings</a>
         	<ul class="nav">
 	        
 	    	</ul>
@@ -129,6 +143,13 @@
     </ul>
 </div></div>
     <div class="col-lg-9" role="main">
+
+<h1 id="bootstrap-version">Bootstrap version</h1>
+<hr />
+<p>Because there are some changes in class names and layout between Bootstrap 3 and Bootstrap 4, bootstrap-select needs to know the version of Bootstrap you are using. By default, bootstrap-select automatically detects the version of Bootstrap. However, there are some instances where the version detection does not work properly (e.g. Bootstrap is being loaded asynchronously or there is a namespace collision). For now, bootstrap-select defaults to using Bootstrap 3 formatting if version detection fails. This will be changed in the next major release.</p>
+<p>You can manually specify Bootstrap's version via bootstrap-select's <code>Constructor.BootstrapVersion</code> object:</p>
+<pre><code class="js">$.fn.selectpicker.Constructor.BootstrapVersion = '4';
+</code></pre>
 
 <h1 id="core-options">Core options</h1>
 <hr />
@@ -422,6 +443,12 @@
   </tr>
   </tbody>
 </table>
+
+<h1 id="default-settings">Default settings</h1>
+<hr />
+<p>You can change the default settings for bootstrap-select by modifying its <code>Constructor.DEFAULTS</code> object:</p>
+<pre><code class="js">$.fn.selectpicker.Constructor.DEFAULTS.multipleSeparator = ' | ';
+</code></pre>
 
 <h1 id="events">Events</h1>
 <hr />
