@@ -303,7 +303,7 @@
 <h2 id="live-search_1">Live search</h2>
 <p>You can add a search input by passing <code>data-live-search="true"</code> attribute:</p>
 <div class="bs-docs-example no-code">
-  <select class="selectpicker" data-live-search="true">
+  <select class="selectpicker" data-live-search="true" data-width="fit">
     <option>Hot Dog, Fries and a Soda</option>
     <option>Burger, Shake and a Smile</option>
     <option>Sugar, Spice and all things nice</option>
@@ -313,7 +313,7 @@
 <h2 id="key-words">Key words</h2>
 <p>Add key words to options to improve their searchability using <code>data-tokens</code>.</p>
 <div class="bs-docs-example">
-  <select class="selectpicker" data-live-search="true">
+  <select class="selectpicker" data-live-search="true" data-width="fit">
     <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
     <option data-tokens="mustard">Burger, Shake and a Smile</option>
     <option data-tokens="frosting">Sugar, Spice and all things nice</option>
@@ -378,7 +378,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
 <div class="bs-docs-example">
   <div class="form-group">
     <label>Multiple</label>
-    <select class="selectpicker" multiple title="Choose one of the following...">
+    <select class="selectpicker" multiple title="Choose one of the following..." data-width="fit">
       <option>Mustard</option>
       <option>Ketchup</option>
       <option>Relish</option>
@@ -387,7 +387,7 @@ Using the <code>title</code> attribute will set the default placeholder text whe
 
   <div class="form-group">
     <label>Standard</label>
-    <select class="selectpicker" title="Choose one of the following...">
+    <select class="selectpicker" title="Choose one of the following..." data-width="fit">
       <option>Mustard</option>
       <option>Ketchup</option>
       <option>Relish</option>
@@ -769,15 +769,15 @@ Using the <code>title</code> attribute will set the default placeholder text whe
 <p>Insert custom HTML into the option with the <code>data-content</code> attribute:</p>
 <div class="bs-docs-example">
   <select class="selectpicker">
-    <option data-content="<span class='label label-warning'>Mustard</span>">Mustard</option>
-    <option data-content="<span class='label label-danger label-important'>Ketchup</span>">Ketchup</option>
-    <option data-content="<span class='label label-success'>Relish</span>">Relish</option>
-    <option data-content="<span class='label label-info'>Mayonnaise</span>">Mayonnaise</option>
+    <option data-content="<span class='badge badge-warning'>Mustard</span>">Mustard</option>
+    <option data-content="<span class='badge badge-danger label-important'>Ketchup</span>">Ketchup</option>
+    <option data-content="<span class='badge badge-success'>Relish</span>">Relish</option>
+    <option data-content="<span class='badge badge-info'>Mayonnaise</span>">Mayonnaise</option>
   </select>
 </div>
 
 <pre><code class="html">&lt;select class=&quot;selectpicker&quot;&gt;
-  &lt;option data-content=&quot;&lt;span class='label label-success'&gt;Relish&lt;/span&gt;&quot;&gt;Relish&lt;/option&gt;
+  &lt;option data-content=&quot;&lt;span class='badge badge-success'&gt;Relish&lt;/span&gt;&quot;&gt;Relish&lt;/option&gt;
 &lt;/select&gt;
 </code></pre>
 
